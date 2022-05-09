@@ -6,8 +6,8 @@ export default function App() {
     <SafeAreaView
       style={{
         flex: 1,
-        paddingTop: Platform.OS === 'android' ? 25 : 0,
-        backgroundColor:'#eee'
+        paddingTop: Platform.OS === 'android' ? 20 : 0,
+        backgroundColor: '#eee',
       }}
     >
       <Home />
