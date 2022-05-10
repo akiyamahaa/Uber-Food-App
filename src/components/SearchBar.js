@@ -4,11 +4,23 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
+const PLACE_API_KEY = 'AIzaSyD3g70GIDK8sOJApcdTCW-nmvMQaruRvmw';
+// TODO: Enable billing for activate.
+// NOTE: Using GooglePlacesAutocomplete to search location then taking location to yelp to get restaurant data
 const SearchBar = () => {
   return (
     <View style={styles.root}>
       <GooglePlacesAutocomplete
+        query={{
+          key: PLACE_API_KEY,
+          language: 'vi',
+        }}
         placeholder="Search"
+        onPress={(data, details = null) => {
+          // 'details' is provided when fetchDetails = true
+          // const city = data.description.split(',')[0];
+          //  setCity(city)
+        }}
         styles={{
           textInputContainer: {
             backgroundColor: '#eee',
